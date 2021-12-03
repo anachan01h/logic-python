@@ -30,6 +30,8 @@ class Tree(object):
 def initial_segment(expr, init_set):
     for init_seg in init_set:
         cx = 0
+        if len(init_seg) > len(expr):
+            continue
         for n in range(len(init_seg)):
             if init_seg[n] == expr[n]:
                 cx += 1
